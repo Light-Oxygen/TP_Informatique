@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
 unsigned short Est_Une_Lettre (char c);
 
@@ -9,7 +10,7 @@ int main()
     char c;
     printf("Saisir une lettre :\n");
     fflush(stdin);
-    c=getchar();
+    c=getch();
     verif = Est_Une_Lettre(c);
     if(verif == 1) {
         printf("C'est une lettre");
