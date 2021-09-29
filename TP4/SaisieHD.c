@@ -15,32 +15,32 @@ int main()
 
     Val2 = Saisie_hd(); /* Récupération de Val2 avec la fonction définie Saisie_Hd() */
     
-    AbsVal1 = ValeurAbs(Val1);
-    AbsVal2 = ValeurAbs(Val2);
+    AbsVal1 = ValeurAbs(Val1); /* Calcul de la valeur absolue de la variable Val1 */ 
+    AbsVal2 = ValeurAbs(Val2); /* Calcul de la valeur absolue de la variable Val2 */ 
 
-    printf("Abs Val 1 : %hd\n", AbsVal1);
-    printf("Abs Val 2 : %hd\n", AbsVal2);
+    printf("Abs Val 1 : %hd\n", AbsVal1); /* Affiche la valeur absolue de la variable Val1 */ 
+    printf("Abs Val 2 : %hd\n", AbsVal2); /* Affiche la valeur absolue de la variable Val2 */ 
 
-    Diff = AbsVal1 - AbsVal2;
+    Diff = AbsVal1 - AbsVal2; /* Calcul de la différence entre les deux valeurs absolues */ 
 
-    printf("Abs Diff : %hd\n", ValeurAbs(Diff));
+    printf("Abs Diff : %hd\n", ValeurAbs(Diff)); /* Retourne la valeur absolue de la différence */ 
     return 0;
 }
 
 signed short Saisie_hd()
 {
-    signed short Entry;
-    printf("Saisir un nombre entier :\n");
-    fflush(stdin);
-    scanf("%hd", &Entry);
-    return Entry;
+    signed short Entry; /* Variable interne à la fonction, l'entrée saisie par l'utilisateur */ 
+    printf("Saisir un nombre entier :\n"); 
+    fflush(stdin); /* Nettoyage du Buffer */ 
+    scanf("%hd", &Entry); /* Saisie utilisateur du nombre entier demandé */ 
+    return Entry; /* Sortie de la fonction, valeur saisie par l'utilisateur */ 
 }
 
 unsigned short ValeurAbs(signed short x)
 {
     unsigned short Abs; /* Valeur absolue */
 
-    if (x < 0)
+    if (x < 0) /* Calcul de la valeur absolue : Si x<0 alors il faut faire -x pour l'obtenir, sinon retourner la valeur x */ 
     {
         Abs = -x;
     }
