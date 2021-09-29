@@ -31,7 +31,7 @@ unsigned short ValeurAbs(signed short x)
 {
     unsigned short Abs; /* Valeur absolue */
 
-    if (x < 0)
+    if (x < 0) /* Calcul de la valeur absolue : Si x<0 alors il faut faire -x pour l'obtenir, sinon retourner la valeur x */ 
     {
         Abs = -x;
     }
